@@ -10,7 +10,7 @@
   --accent-color: rgba(33, 150, 243, 1);
   --primery-white-color: #ffffff;
   --bgc-grey: rgba(245, 244, 250, 1);
-  --fill-icon: #afb1b8;
+  --fill-icon: rgba(175, 177, 184, 0.8);
   --mr: 30px;
   --mb: 30px;
 }
@@ -233,7 +233,6 @@ body {
 
 .action-icons {
   display: flex;
-  /* justify-content: center; */
 }
 .action-icons .item {
   display: inline-flex;
@@ -245,16 +244,12 @@ body {
   height: 120px;
 
   fill: var(--title-text-color);
-
-  background-color: #afb1b8;
-  outline: 2px solid red;
 }
 
 .action-icons .item:last-child {
   margin-right: 0;
 }
 
-/* ====Не чипаємо ===================================== */
 .action-list {
   display: flex;
   justify-content: center;
@@ -378,7 +373,7 @@ body {
   padding-bottom: 30px;
 }
 
-.team-icons .team-icon {
+.team-icon {
   display: inline-flex;
 
   width: 44px;
@@ -397,14 +392,60 @@ body {
   fill: var(--primery-white-color);
   background-color: var(--accent-color);
   border-radius: 50%;
+  cursor: pointer;
 }
 /*========= END Team ========= */
+/* ========= Customer ========= */
+
+.customer {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.customer-list {
+  display: flex;
+  justify-content: center;
+}
+
+.customer-list .item {
+  display: flex;
+  align-items: center;
+
+  border: 1px solid var(--fill-icon);
+  border-radius: 4px;
+
+  /* padding: 23px 65px; */
+  margin-right: var(--mr);
+  margin-bottom: var(--mb);
+  width: 170px;
+  height: 92px;
+
+  fill: var(--fill-icon);
+}
+
+.customer-list .item:last-child {
+  margin-right: 0;
+}
+
+.customer-list .item:hover {
+  fill: var(--accent-color);
+  border: 1px solid var(--accent-color);
+}
+/* ========= END Customer ========= */
 /*========== Footer =========*/
 
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #2f303a;
+}
+
+.footer-flex {
+  display: flex;
+}
+
+.footer-contacts {
+  margin-right: 70px;
 }
 
 .footer a .logo:last-child {
@@ -435,6 +476,35 @@ body {
 
 .footer-contact > .item:last-child {
   margin-bottom: 0px;
+}
+
+.sotial {
+  margin-bottom: 20px;
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--primery-white-color);
+}
+
+.sotial-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.sotial-link {
+  fill: var(--primery-white-color);
+
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sotial-link:hover {
+  fill: var(--primery-white-color);
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 /*========= END Footer =========*/
