@@ -114,19 +114,6 @@ body {
   letter-spacing: 0.02em;
 }
 
-/* .menu .item::after {
-  display: inline-block;
-  width: 100%;
-  height: 4px;
-
-  content: "";
-  border-radius: 2px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 28px;
-  background-color: var(--accent-color);
-} */
-
 .menu .item,
 .contact .item {
   margin-right: 50px;
@@ -141,15 +128,6 @@ body {
   height: 12px;
   margin-right: 10px;
   fill: currentColor;
-}
-
-.link-nav::before {
-  content: "";
-  width: 24px;
-  height: 24px;
-  margin-right: 16px;
-  background-image: url("./images/sprite.svg#icon-phone");
-  background-size: contain;
 }
 
 .contact {
@@ -181,17 +159,15 @@ body {
   padding-top: 200px;
   padding-bottom: 200px;
 
+  background-color: rgba(47, 48, 58, 0.4);
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
     url("/images/hero.jpeg");
-
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-/* linear-gradient(rgba(47, 48, 58, 0.4)) */
 
 .hero .container {
   text-align: center;
@@ -261,12 +237,17 @@ body {
   margin-bottom: var(--mb);
   width: 270px;
   height: 120px;
-
-  fill: var(--title-text-color);
 }
 
 .action-icons .item:last-child {
   margin-right: 0;
+}
+
+.action-icon {
+  display: inline-flex;
+  width: 70px;
+  height: 70px;
+  fill: currentColor;
 }
 
 .action-list {
@@ -386,33 +367,45 @@ body {
   text-align: center;
 }
 
-.team-icons {
+.social-list {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   padding-bottom: 30px;
+  padding-left: 32px;
+  padding-right: 32px;
 }
 
-.team-icon {
-  display: inline-flex;
-
-  width: 44px;
-  height: 44px;
-  padding: 12px;
+.social-list-item {
   margin-right: 10px;
-
-  fill: var(--fill-icon);
-  /* outline: 1px solid gray; */
 }
-.team-icons .team-icon:last-child {
+
+.social-list-item:last-child {
   margin-right: 0;
 }
 
-.team-icons .team-icon:hover {
-  fill: var(--primery-white-color);
-  background-color: var(--accent-color);
+.social-list-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  fill: var(--fill-icon);
   border-radius: 50%;
-  cursor: pointer;
 }
+
+.social-list-link:hover,
+.social-list-link:focus {
+  background-color: var(--accent-color);
+  fill: var(--primery-white-color);
+}
+
+.social-list-icon {
+  width: 20px;
+  height: 20px;
+}
+
 /*========= END Team ========= */
 /* ========= Customer ========= */
 
@@ -423,33 +416,61 @@ body {
 
 .customer-list {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
-.customer-list .item {
+.customer-list-item {
   display: flex;
-  /* align-items: center; */
+  justify-content: center;
+  align-items: center;
 
   border: 1px solid var(--fill-icon);
   border-radius: 4px;
 
-  /* padding: 23px 65px; */
   margin-right: var(--mr);
   margin-bottom: var(--mb);
   width: 170px;
   height: 92px;
-
-  fill: var(--fill-icon);
+  background-color: var(--primery-white-color);
+  fill: rebeccapurple;
 }
 
 .customer-list .item:last-child {
   margin-right: 0;
 }
 
-.customer-list .item:hover {
+.customer-list .item:hover,
+.customer-list .item:focus {
   fill: var(--accent-color);
   border: 1px solid var(--accent-color);
 }
+
+.customer-list-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  fill: var(--fill-icon);
+}
+
+.customer-list-item:hover,
+.customer-list-item:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.customer-list-icon {
+  width: 106px;
+  height: 60px;
+}
+
+.customer-list-link:hover,
+.customer-list-link:focus {
+  fill: var(--accent-color);
+}
+
 /* ========= END Customer ========= */
 /*========== Footer =========*/
 
@@ -497,7 +518,7 @@ body {
   margin-bottom: 0px;
 }
 
-.sotial {
+.social {
   margin-bottom: 20px;
 
   font-size: 14px;
@@ -507,23 +528,26 @@ body {
   color: var(--primery-white-color);
 }
 
-.sotial-icons {
-  display: flex;
-  justify-content: center;
+/* ========    СОЦ СЕТИ  ======= */
+
+.footer-social-list {
+  padding: 0;
 }
 
-.sotial-link {
+.footer-social-list-item {
   fill: var(--primery-white-color);
 
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.sotial-link:hover {
+.footer-social-list-item:hover {
   fill: var(--primery-white-color);
   background-color: var(--accent-color);
-  border-radius: 50%;
-  cursor: pointer;
+}
+
+.footer-social-link {
+  fill: var(--primery-white-color);
 }
 
 /*========= END Footer =========*/
