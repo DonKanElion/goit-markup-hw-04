@@ -38,7 +38,9 @@ p {
 
 img {
   display: block;
+  max-width: 100%;
 }
+
 body {
   background-color: var(--bgc-grey);
   color: var(--title-text-color);
@@ -149,6 +151,8 @@ body {
 }
 
 .secondy-text {
+  display: flex;
+  align-items: center;
   color: var(--secondy-text-color);
 }
 
@@ -203,7 +207,6 @@ body {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
-  /* text-align: center; */
 
   background-color: var(--accent-color);
   color: var(--primery-white-color);
@@ -226,10 +229,16 @@ body {
   background-color: var(--primery-white-color);
 }
 
+.action-list {
+  display: flex;
+  justify-content: center;
+}
+
 .action-icons {
   display: flex;
 }
-.action-icons .item {
+
+.action-box-icons {
   display: inline-flex;
 
   padding: 25px 100px;
@@ -237,6 +246,7 @@ body {
   margin-bottom: var(--mb);
   width: 270px;
   height: 120px;
+  background-color: rgba(245, 244, 250, 1);
 }
 
 .action-icons .item:last-child {
@@ -248,11 +258,6 @@ body {
   width: 70px;
   height: 70px;
   fill: currentColor;
-}
-
-.action-list {
-  display: flex;
-  justify-content: center;
 }
 
 .item-action {
@@ -327,11 +332,7 @@ body {
 .team-photo {
   width: 270px;
   height: 260px;
-}
-
-.team-box {
-  padding-top: 30px;
-  padding-bottom: 15px;
+  margin-bottom: var(--mb);
 }
 
 .team-list .item {
@@ -361,6 +362,7 @@ body {
 }
 
 .team-skills {
+  margin-bottom: 16px;
   color: var(--secondy-text-color);
   font-size: 16px;
   line-height: 1.18;
@@ -402,6 +404,7 @@ body {
 }
 
 .social-list-icon {
+  /* display: block; */
   width: 20px;
   height: 20px;
 }
@@ -412,6 +415,7 @@ body {
 .customer {
   padding-top: 94px;
   padding-bottom: 94px;
+  background-color: transparent;
 }
 
 .customer-list {
@@ -420,10 +424,6 @@ body {
 }
 
 .customer-list-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   border: 1px solid var(--fill-icon);
   border-radius: 4px;
 
@@ -482,6 +482,7 @@ body {
 
 .footer-flex {
   display: flex;
+  align-items: baseline;
 }
 
 .footer-contacts {
@@ -527,8 +528,6 @@ body {
   text-transform: uppercase;
   color: var(--primery-white-color);
 }
-
-/* ========    СОЦ СЕТИ  ======= */
 
 .footer-social-list {
   padding: 0;
@@ -603,14 +602,14 @@ body {
 
 .projects > .item {
   width: 370px;
-  height: 404px;
   margin-right: var(--mr);
   margin-bottom: var(--mb);
 
   border: 1px solid transparent;
 }
 
-.projects > .item:hover {
+.projects > .item a:hover,
+.projects > .item a:focus {
   border: 1px solid var(--primery-white-color);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -629,7 +628,6 @@ body {
   background: var(--primery-white-color);
   border: 1px solid var(--bgc-grey);
   border-top: 1px solid transparent;
-  /* box-sizing: border-box; */
 }
 
 .project-name {
